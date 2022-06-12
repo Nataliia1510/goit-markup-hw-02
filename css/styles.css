@@ -7,17 +7,27 @@
   --accent-txt-cl: #2196f3;
   --main-txt-title: #212121;
   --main-txt-subtitle: #757575;
+  --footer-txt-contact: rgba(255, 255, 255, 0.6);
 
   /* bg-colors */
 
+  --accent-btn-bc: #2196f3;
+  --no-accent-btn-bc: #f5f4fa;
+  --hover-focus-btn-bc: #188ce8;
+  --dark-bc: #2f303a;
+  --light-bc: #f5f4fa;
+
   /* others */
+
+  --white-txt-bc: #ffffff;
+  --black-txt-bc: #000000;
 }
 
 body {
   font-family: var(--main-font), sans-serif;
   font-size: 14px;
   line-height: 1.71;
-  color: var(--main-txt-title);
+  color: var(--main-txt-subtitle);
 }
 
 /* common styles start */
@@ -43,25 +53,28 @@ body {
 }
 
 .header-title-part {
-  color: #000000;
+  color: var(--black-txt);
 }
 
 .footer-title-part {
-  color: #ffffff;
+  color: var(--white-txt-bc);
 }
 
 /* common styles end */
 
 /* Header section */
 .page-header {
-  background-color: #ffffff;
+  background-color: var(--white-txt-bc);
 }
 
-.header-link {
+.header-text {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+}
+
+.header-link {
   color: var(--main-txt-title);
 }
 
@@ -75,10 +88,6 @@ body {
 }
 
 .header-contact {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
   color: var(--main-txt-subtitle);
 }
 
@@ -92,7 +101,7 @@ body {
 /* Hero section */
 
 .hero {
-  background-color: #2f303a;
+  background-color: var(--dark-bc);
 }
 
 .main-title {
@@ -102,7 +111,7 @@ body {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: #ffffff;
+  color: var(--white-txt-bc);
 }
 
 .btn-hero {
@@ -114,14 +123,14 @@ body {
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
-  color: #ffffff;
-  background-color: #2196f3;
+  color: var(--white-txt-bc);
+  background-color: var(--accent-btn-bc);
   cursor: pointer;
 }
 
 .btn-hero:hover,
 .btn-hero:focus {
-  background: #188ce8;
+  background-color: var(--hover-focus-btn-bc);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
 }
@@ -131,7 +140,7 @@ body {
 .about-subtitle {
   font-weight: 700;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--main-txt-title);
@@ -142,7 +151,6 @@ body {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  color: var(--main-txt-subtitle);
 }
 
 /* Work section */
@@ -157,6 +165,14 @@ body {
 }
 
 /* Team section */
+
+.team {
+  background-color: var(--light-bc);
+}
+
+.card-team {
+  background-color: var(--white-txt-bc);
+}
 
 .caption-team {
   font-weight: 500;
@@ -173,13 +189,12 @@ body {
   line-height: 1.19;
   text-align: center;
   letter-spacing: 0.03em;
-  color: var(--main-txt-subtitle);
 }
 
 /* Footer section */
 
 .footer {
-  background-color: #2f303a;
+  background-color: var(--dark-bc);
 }
 
 .footer-contact {
@@ -190,11 +205,21 @@ body {
 }
 
 .footer-contact-link {
-  color: #ffffff;
+  color: var(--white-txt-bc);
+}
+
+.footer-contact-link:hover,
+.footer-contact-link:focus {
+  color: var(--accent-txt-cl);
 }
 
 .footer-contact-list {
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--footer-txt-contact);
+}
+
+.footer-contact-list:hover,
+.footer-contact-list:focus {
+  color: var(--accent-txt-cl);
 }
 
 /* Portfolio html */
@@ -207,18 +232,23 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--main-txt-title);
-  background-color: #f5f4fa;
+  background-color: var(--no-accent-btn-bc);
   border-radius: 4px;
   cursor: pointer;
 }
 
 .btn-portfolio:hover,
 .btn-portfolio:focus {
-  color: #ffffff;
-  background-color: #2196f3;
+  color: var(--white-txt-bc);
+  background-color: var(--accent-btn-bc);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
+}
+
+.current-btn {
+  background-color: var(--accent-btn-bc);
+  color: var(--white-txt-bc);
 }
 
 .caption-portfolio {
@@ -234,5 +264,4 @@ body {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
-  color: var(--main-txt-subtitle);
 }
