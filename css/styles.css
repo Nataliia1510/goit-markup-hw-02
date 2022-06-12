@@ -5,9 +5,9 @@
 
   /* text colors */
   --accent-txt-cl: #2196f3;
-  --main-txt-title: #212121;
-  --main-txt-subtitle: #757575;
-  --footer-txt-contact: rgba(255, 255, 255, 0.6);
+  --basic-txt-title: #212121;
+  --basic-txt-subtitle: #757575;
+  --font-txt-cl: rgba(255, 255, 255, 0.6);
 
   /* bg-colors */
 
@@ -19,15 +19,15 @@
 
   /* others */
 
-  --white-txt-bc: #ffffff;
-  --black-txt-bc: #000000;
+  --contrast-light-txt-bc: #ffffff;
+  --contrast-dark-txt-bc: #000000;
 }
 
 body {
   font-family: var(--main-font), sans-serif;
   font-size: 14px;
   line-height: 1.71;
-  color: var(--main-txt-subtitle);
+  color: var(--basic-txt-subtitle);
 }
 
 /* common styles start */
@@ -43,7 +43,7 @@ body {
   font-style: normal;
 }
 
-.title-name {
+.logo {
   font-family: var(--secondary-font);
   font-weight: 700;
   font-size: 26px;
@@ -53,18 +53,23 @@ body {
 }
 
 .header-title-part {
-  color: var(--black-txt-bc);
+  color: var(--contrast-dark-txt-bc);
 }
 
 .footer-title-part {
-  color: var(--white-txt-bc);
+  color: var(--contrast-light-txt-bc);
+}
+
+.btn {
+  cursor: pointer;
+  border: none;
 }
 
 /* common styles end */
 
 /* Header section */
 .page-header {
-  background-color: var(--white-txt-bc);
+  background-color: var(--contrast-light-txt-bc);
 }
 
 .header-text {
@@ -75,7 +80,7 @@ body {
 }
 
 .header-link {
-  color: var(--main-txt-title);
+  color: var(--basic-txt-title);
 }
 
 .header-link:hover,
@@ -88,7 +93,7 @@ body {
 }
 
 .header-contact {
-  color: var(--main-txt-subtitle);
+  color: var(--basic-txt-subtitle);
 }
 
 .header-contact:hover,
@@ -111,7 +116,7 @@ body {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--white-txt-bc);
+  color: var(--contrast-light-txt-bc);
 }
 
 .btn-hero {
@@ -119,13 +124,9 @@ body {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
-  display: flex;
-  align-items: center;
-  text-align: center;
   letter-spacing: 0.06em;
-  color: var(--white-txt-bc);
+  color: var(--contrast-light-txt-bc);
   background-color: var(--accent-btn-bc);
-  cursor: pointer;
 }
 
 .btn-hero:hover,
@@ -143,7 +144,7 @@ body {
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: var(--main-txt-title);
+  color: var(--basic-txt-title);
 }
 
 .text-about {
@@ -161,7 +162,7 @@ body {
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
-  color: var(--main-txt-title);
+  color: var(--basic-txt-title);
 }
 
 /* Team section */
@@ -171,7 +172,7 @@ body {
 }
 
 .card-team {
-  background-color: var(--white-txt-bc);
+  background-color: var(--contrast-light-txt-bc);
 }
 
 .caption-team {
@@ -180,7 +181,7 @@ body {
   line-height: 1.19;
   text-align: center;
   letter-spacing: 0.03em;
-  color: var(--main-txt-title);
+  color: var(--basic-txt-title);
 }
 
 .text-team {
@@ -205,7 +206,7 @@ body {
 }
 
 .footer-contact-link {
-  color: var(--white-txt-bc);
+  color: var(--contrast-light-txt-bc);
 }
 
 .footer-contact-link:hover,
@@ -214,7 +215,7 @@ body {
 }
 
 .footer-contact-list {
-  color: var(--footer-txt-contact);
+  color: var(--font-txt-cl);
 }
 
 .footer-contact-list:hover,
@@ -231,19 +232,23 @@ body {
   line-height: 1.62;
   text-align: center;
   letter-spacing: 0.03em;
-  color: var(--main-txt-title);
+  color: var(--basic-txt-title);
   background-color: var(--no-accent-btn-bc);
   border-radius: 4px;
-  cursor: pointer;
 }
 
 .btn-portfolio:hover,
 .btn-portfolio:focus {
-  color: var(--white-txt-bc);
+  color: var(--contrast-light-txt-bc);
   background-color: var(--accent-btn-bc);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
+}
+
+.current-btn {
+  color: var(--contrast-light-txt-bc);
+  background-color: var(--accent-btn-bc);
 }
 
 .caption-portfolio {
@@ -251,7 +256,7 @@ body {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-  color: var(--main-txt-title);
+  color: var(--basic-txt-title);
 }
 
 .text-portfolio {
